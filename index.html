@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Huang的50音图练习器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="initial">
+        输入一次产生的音的数量（1~10）：<br>
+        <input type="range" id="num" min="1" max="10" step="1" value="5"><br>
+        <button onclick="deploy()">生成</button><button onclick="reset()">重新设置进度</button><button onclick="show()">显示50音图表</button>
+    </div>
+    <div id="problemset">
+        <div id="progress">当前学习进度：<strong>あ~<span id="current"></span></strong></div>
+        <button id="toggleHir">平假名</button>
+        <button id="toggleKat">片假名</button>
+        <button id="toggleRom">罗马音</button><br>
+        <div id="hiragana">平假名：<span id="hir"></span></div>
+        <div id="katakana">片假名：<span id="kat"></span></div>
+        <div id="roman" style="display: none">罗马音：<span id="rom"></span></div><br>
+        <button onclick="deploy()">重新生成</button>
+    </div>
+    <div id="table">
+        <!-- 这里是对照表 -->
+    </div>
+    <hr>
+    <footer>Bob Huang的50音图练习器💖</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
